@@ -7,17 +7,17 @@ The process to detect and track cars by MDMONet can be divided into two parts: d
 
 2. Detector
 - For the detector, ssd is appled to detect cars in sequences. For installation of ssd, please consult the [SSD](https://github.com/weiliu89/caffe/tree/ssd)
-- Then, open `ssd/examples/ssd_detect.ipynb` file to do detection, the original file should be put as a folder into `ssd/examples/images`. In the file folder, `/dec` folder will be added to save the output detection file.
+- Then, open `ssd/examples/ssd_detect.ipynb` file to do detection, the original file should be put as a folder into `ssd/examples/images/`. In the file folder, `./dec/` folder will be added to save the output detection file.
 - When running the code, please modify the coordinate of region you want to crop and detect and the path of original sequence images, then run the result, sample output can be shown as follow:
 
 <img src="https://github.com/ShuoWillWang/MDNet-MOT/blob/master/00002.png" alt="SSD Result" width="600px">
 
-- Having finished the detection, detect result images and txt coordinates of bounding boxes will be saved in original image folder. colloect all original sequence images into a new folder called `./img`
+- Having finished the detection, detect result images and txt coordinates of bounding boxes will be saved in original image folder. colloect all original sequence images into a new folder called `./img/`
 
 3. Tracker
-- Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) into `tracker/py-MDNet-master/models`
+- Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) into `tracker/py-MDNet-master/models/`
 - Move the folder into path: `tracker/py-MDNet-master/dataset/OTB/`
-- Open `/tracker/py-MDNet-master/tracking/trackerM.ipynb` and run. Then result path will be saved in `result` and image will be saved in `result_fig`.
+- Open `/tracker/py-MDNet-master/tracking/trackerM.ipynb` and run. Then result path will be saved in `/tracker/py-MDNet-master/result/` and image will be saved in `/tracker/py-MDNet-master/result_fig/`.
 
 ## Abstract
 
