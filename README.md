@@ -23,7 +23,7 @@ This research is accomplished by team member as follow:
 - Having finished the detection, detect result images and txt coordinates of bounding boxes will be saved in original image folder. colloect all original sequence images into a new folder called `./img/`
 
 3. Tracker
-- Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) into `tracker/py-MDNet-master/models/`
+- Install the tracker, consult the [py-MDNet](https://github.com/HyeonseobNam/py-MDNet)
 - Move the folder into path: `tracker/py-MDNet-master/dataset/OTB/`
 - Open `/tracker/py-MDNet-master/tracking/trackerM.ipynb` and run. Then result path will be saved in `/tracker/py-MDNet-master/result/` and image will be saved in `/tracker/py-MDNet-master/result_fig/`.
 
