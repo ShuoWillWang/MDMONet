@@ -132,7 +132,7 @@ Then tracker will ignore candidates with low overlapped ratio and throw top N ov
 
 If target score is higher than threshold, we define this track as ‘type_1 tracking’, which means we trust this result and will leave it alone. Otherwise we define track as ‘type_2 tracking’, which means we need to check the outcome later. 
 
-### how to deal with coming/leaving and occlusion
+### How to deal with coming/leaving and occlusion
 
 Recall there is occlusion and reshow up problem, we solve that via ‘double checking module’. This module will be activated after certain frames and only consider ‘type_2’ tracking. The idea is that if tracker fail to perform a good tracking this frame, we check previous N frames to see this object is successfully tracked before. 
 
@@ -140,11 +140,11 @@ If in previous frames there is detection bounding box overlapped with tracking f
 
 After all objects in previous frames settle, we compare object list to see if there is new object coming. If there is, we create its sample pool and model.  
 
-### update network
+### Update network
 
 This part is pretty similar to corresponding module in MDNet. If tracking type is one, we generate positive and negative samples for the object and store them to respective pool. If tracking type is two, we apply a short term update to the network using samples in current pool. This is based on the assumption that bad tracking is due to poor performance of current object sample’s model, thus need more training. For every fixed number of frames, we perform a long term update, which will update all valid objects’ models using respective sample pool. 
 
-### detail implement algorithm
+### Detail implement algorithm
 
 #### Initialization step
 
