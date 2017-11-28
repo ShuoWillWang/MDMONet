@@ -332,3 +332,7 @@ There are other applications can be implemented with MDMONet. For instance, our 
 
 Besides, MDMONet manages to record traces of objects, hence user can cascade their own module to take care of different business. In our experiment, we planed to implement an over-speed detection as well. However, due to driving system of GTAV (Top speed is severely restricted and AI drives so fast, afterburner mod is banned so we can not create fast enough vehicle), it is implausible to collect valid data, but this will be pretty easy in real life.  
 
+## References
+- Wei Liu and Dragomir Anguelov and Dumitru Erhan, “[SSD: Single Shot MultiBox Detector](http://arxiv.org/abs/1512.02325)”
+- Shaoqing Ren and Kaiming He and Ross Girshick and Jian Sun, “[Faster {R-CNN}: Towards Real-Time Object Detection with Region Proposal Networks](http://arxiv.org/abs/1506.01497)”
+- Hyeonseob Nam and Bohyung Han, “[Learning Multi-Domain Convolutional Neural Networks for Visual Tracking](https://arxiv.org/abs/1510.07945)”
