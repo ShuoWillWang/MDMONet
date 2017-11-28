@@ -4,7 +4,9 @@ The process to detect and track cars by MDMONet can be divided into two parts: d
 
 ## Installation and Usage
 
-1. Detector
+1. Download MDMONet and unpack ssd and tracker
+
+2. Detector
 - For the detector, ssd is appled to detect cars in sequences. For installation of ssd, please consult the [SSD](https://github.com/weiliu89/caffe/tree/ssd)
 - Then, open `ssd/examples/ssd_detect.ipynb` file to do detection, the original file should be put as a folder into `ssd/examples/images`. In the file folder, `/dec` folder will be added to save the output detection file.
 - When running the code, please modify the coordinate of region you want to crop and detect and the path of original sequence images, then run the result, sample output can be shown as follow:
@@ -13,7 +15,7 @@ The process to detect and track cars by MDMONet can be divided into two parts: d
 
 - Having finished the detection, detect result images and txt coordinates of bounding boxes will be saved in original image folder. colloect all original sequence images into a new folder called `./img`
 
-2. Tracker
+3. Tracker
 - Move the folder into path: `tracker/py-MDNet-master/dataset/OTB/`
 - Open `/tracker/py-MDNet-master/tracking/trackerM.ipynb` and run. Then result path will be saved in `result` and image will be saved in `result_fig`.
 
