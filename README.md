@@ -257,3 +257,40 @@ We also try other methods, for example run a linear regression with nonlinear ba
 We will present following result: detecting result, stable traffic result, rude driving result. Afterward a small comment on those results and possible potential further application will be discussed.
 
 ### Detecting Result
+
+We will present following result: detecting result, stable traffic result, rude driving result. Afterward a small comment on those results and possible potential further application will be discussed.
+
+### Detecting Result
+
+<img src="https://github.com/ShuoWillWang/MDNet-MOT/blob/master/images/14.png" alt="SSD Result" height="600px">
+
+Figure 5.1.1 detecting Result
+
+Corresponding text has following format: [class number, frame index, x0, y0, x,y]. Text will record objects’ coordinates in every frames. 
+
+### Stable Traffic flow Result
+
+Figure 5.2.1 Stable traffic, clear weather
+
+Figure 5.2.2 Stable traffic, froggy  weather
+
+Figure 5.2.3 Stable traffic, rainy  weather
+
+### Sequence contain offensive driving
+
+Figure 5.3.1 offensive driving_ evening
+
+Figure 5.3.2 offensive driving_ morning
+
+## Conclusion and Further Application
+
+According to experiment result last section, we can draw conclusions that:
+- MDMONet update network with previous experience, it collects sample while training, thus it doesn’t need a huge amount of labeled data, which is expensive to gather in most case.
+- MDMONet is stable and accurate enough to be put into real industry life. (not a single tracking error occurs in the experiment)
+- MDMONet is a real-time network, it does not need any further frames’ information. Although in our experiment we pass entire sequence to SSD first, that is not necessary.
+- MDMONet is hardware friendly. In the whole training process, only three fully-connected layers are trained, which means computation complexity is low. In  our program, we delete everything except for status of missing objects, thus memory usage is under control.
+
+There are other applications can be implemented with MDMONet. For instance, our program record each object’s index and keep them, thus it can count how many objects pass the monitor region. User just need to set up a camera and shoot frames, MDMONet can handle the rest without any trouble.
+
+Besides, MDMONet manages to record traces of objects, hence user can cascade their own module to take care of different business. In our experiment, we planed to implement an over-speed detection as well. However, due to driving system of GTAV (Top speed is severely restricted and AI drives so fast, afterburner mod is banned so we can not create fast enough vehicle), it is implausible to collect valid data, but this will be pretty easy in real life.  
+
