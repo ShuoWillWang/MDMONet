@@ -6,7 +6,7 @@ The process to detect and track cars by MDMONet can be divided into two parts: d
 This research is accomplished by team member as follow:
 - Video Detection (SSD): Shuo Wang
 - Record video sequence for track: Tian Ye, Weidong Chen
-- Multiple Object Tracking Modification Based on SOT: Shuo Wang, Tian Ye
+- MOT Network Construction Based on SOT: Shuo Wang, Tian Ye
 - Final Finetune: All members
 
 ## Installation and Usage
