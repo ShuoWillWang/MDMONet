@@ -15,6 +15,7 @@ The process to detect and track cars by MDMONet can be divided into two parts: d
 - Having finished the detection, detect result images and txt coordinates of bounding boxes will be saved in original image folder. colloect all original sequence images into a new folder called `./img`
 
 3. Tracker
+- Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) into `tracker/py-MDNet-master/models`
 - Move the folder into path: `tracker/py-MDNet-master/dataset/OTB/`
 - Open `/tracker/py-MDNet-master/tracking/trackerM.ipynb` and run. Then result path will be saved in `result` and image will be saved in `result_fig`.
 
